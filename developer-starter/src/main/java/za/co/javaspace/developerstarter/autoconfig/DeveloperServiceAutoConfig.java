@@ -19,8 +19,8 @@ public class DeveloperServiceAutoConfig {
 
     private final Logger logger = LoggerFactory.getLogger(DeveloperServiceAutoConfig.class);
 
-    //@Bean
-    //@ConditionalOnMissingBean
+    @Bean
+    @ConditionalOnMissingBean
     public DeveloperService defaultDriver() {
         return new DefaultDeveloper(
                 "javaSpace",
@@ -29,8 +29,8 @@ public class DeveloperServiceAutoConfig {
         );
     }
 
-    @Bean
-    @ConditionalOnMissingBean
+    //@Bean
+    //@ConditionalOnMissingBean
     public DeveloperService driverService(DefaultDeveloperProperties developerProperties) {
         logger.info("DefaultDeveloper created");
         return new DefaultDeveloper(

@@ -9,7 +9,6 @@ import za.co.javaspace.developerstarter.properties.DeveloperProperties;
 
 @Configuration
 @ComponentScan(basePackageClasses = {DeveloperDetailsController.class})
-@EnableConfigurationProperties({DeveloperProperties.class, DefaultDeveloperProperties.class})
 public class DeveloperControllerAutoConfig {
 
 }
