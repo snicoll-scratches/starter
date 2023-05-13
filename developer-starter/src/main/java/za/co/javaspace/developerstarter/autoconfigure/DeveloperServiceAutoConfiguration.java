@@ -1,23 +1,24 @@
-package za.co.javaspace.developerstarter.autoconfig;
+package za.co.javaspace.developerstarter.autoconfigure;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import org.springframework.boot.autoconfigure.AutoConfiguration;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 import za.co.javaspace.developerstarter.properties.DefaultDeveloperProperties;
 import za.co.javaspace.developerstarter.properties.DeveloperProperties;
 import za.co.javaspace.developerstarter.service.DefaultDeveloper;
 import za.co.javaspace.developerstarter.service.DeveloperService;
 
-@Configuration
+@AutoConfiguration
 @ConditionalOnClass(DeveloperService.class)
 @EnableConfigurationProperties({DeveloperProperties.class, DefaultDeveloperProperties.class})
-public class DeveloperServiceAutoConfig {
+public class DeveloperServiceAutoConfiguration {
 
-    private final Logger logger = LoggerFactory.getLogger(DeveloperServiceAutoConfig.class);
+    private final Logger logger = LoggerFactory.getLogger(DeveloperServiceAutoConfiguration.class);
 
     @Bean
     @ConditionalOnMissingBean

@@ -1,3 +1,0 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-za.co.javaspace.developerstarter.autoconfig.DeveloperServiceAutoConfig,\
-za.co.javaspace.developerstarter.autoconfig.DeveloperControllerAutoConfig
